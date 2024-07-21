@@ -1,0 +1,33 @@
+:root {
+    --primary-color: #901C1C;
+    --secondary-color: #D3573C;
+    --tertiary-color: #FAFAFA;
+    --price-color: #757575;
+
+    --title-font-size: 36px;
+    --font-size-3xs: 8px;
+    --font-size-2xs: 10px;
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+
+    --title-line-height: 46px;
+    --line-height-3xs: 12px;
+    --line-height-2xs: 14px;
+    --line-height-xs: 16px;
+
+    --margin-2xl: 100px;
+
+
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+    --spacing-2xl: 32px;
+    --spacing-3xl: 40px;
+    --spacing-4xl: 48px;
+    --spacing-5xl: 56px;
+    --spacing-6xl: 64px;
+    --spacing-7xl: 72px;
+    --spacing-8xl: 80px;
+
+    --max-breakpoint: 1200px;
+}
