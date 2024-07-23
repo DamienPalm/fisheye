@@ -15,15 +15,19 @@ const render = (photographers) => {
 
     const link = document.createElement("a");
     link.classList.add("main__card__head-card");
-    link.href = "#";
+    link.href = `../photographer.html?id=${photographer.id}`;
     link.setAttribute("name", photographer.name);
 
     cards.appendChild(link);
 
     const photo = document.createElement("img");
-    photo.src = photographer.portrait_thumbnail;
+    if (!photographer.portrait_thumbnail) {
+      photo.src = "../assets/photographers/account.png";
+    } else {
+      photo.src = photographer.portrait_thumbnail;
+    }
+
     photo.alt = photographer.name;
-    photo.height = 200;
     photo.classList.add("main__card__head-card__photo");
 
     const namePhotographer = document.createElement("h2");
