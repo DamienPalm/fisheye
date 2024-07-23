@@ -1,5 +1,5 @@
-import Header from "../components/header.js";
-import Main from "../components/photographers.js";
+import Header from "../components/headerHomepage.js";
+import Main from "../components/photographersCards.js";
 import { fetchData } from "../utils/fetchData.js";
 
 const buildPage = async () => {
