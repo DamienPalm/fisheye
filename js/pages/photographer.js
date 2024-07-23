@@ -1,1 +1,11 @@
-//Mettre le code JavaScript lié à la page photographer.html
+import Header from "../components/headerPhotographer.js";
+
+const buildPage = () => {
+  const headerContainer = document.querySelector(".header");
+  const headerElement = Header.render();
+  headerContainer.replaceWith(headerElement);
+};
+
+(() => {
+  buildPage();
+})();
