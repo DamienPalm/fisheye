@@ -16,6 +16,7 @@ body {
     padding-bottom: var(--margin-2xl);
     max-width: var(--max-breakpoint);
     margin: 0 auto;
+    padding-inline: var(--spacing-9xl);
 }
 
 .header__title {
@@ -28,6 +29,7 @@ body {
 .main {
     max-width: var(--max-breakpoint);
     margin: 0 auto;
+    padding-inline: var(--spacing-9xl);
     display: grid;
     grid-template-columns: repeat(3, 200px);
     gap: var(--spacing-8xl);
