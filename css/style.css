@@ -1,6 +1,6 @@
-@import url("photographer.css");
-@import url("reset.css");
-@import url("variables.css");
+@import url("./photographer.css");
+@import url("./reset.css");
+@import url("./variables.css");
 
 body {
     font-family: "DM Sans", sans-serif;
@@ -23,6 +23,65 @@ body {
     font-size: var(--title-font-size);
     line-height: var(--title-line-height);
     color: var(--primary-color);
+}
+
+.main {
+    max-width: var(--max-breakpoint);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: var(--spacing-8xl);
+    justify-items: center;
+}
+
+.main__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__card__head-card {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__card__head-card__photo {
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.main__card__head-card__title {
+    font-weight: 400;
+    font-size: var(--title-font-size);
+    line-height: var(--title-line-height);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.main__card__body-card {
+    text-align: center;
+}
+
+.main__card__body-card__location {
+    font-weight: 400;
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-xs);
+    color: var(--primary-color);
+}
+
+.main__card__body-card__tagline {
+    font-weight: 400;
+    font-size: var(--font-size-2xs);
+    line-height: var(--line-height-2xs);
+}
+
+.main__card__body-card__price {
+    font-weight: 400;
+    font-size: var(--font-size-3xs);
+    line-height: var(--line-height-3xs);
+    color: var(--price-color);
 }
 
 /* .photographer_section {
