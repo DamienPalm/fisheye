@@ -19,6 +19,10 @@ body {
     padding-inline: var(--spacing-9xl);
 }
 
+.header__link__logo {
+    height: var(--height-logo);
+}
+
 .header__title {
     font-weight: 400;
     font-size: var(--title-font-size);
