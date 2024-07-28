@@ -1,27 +1,12 @@
 const render = () => {
-  const header = document.createElement("header");
-  header.classList.add("header");
-
-  const link = document.createElement("a");
-  link.href = "./index.html";
-  link.classList.add("header__link");
-
-  const logo = document.createElement("img");
-  logo.src = "./assets/images/logo.png";
-  logo.alt = "Fisheye Home page";
-  logo.height = 50;
-  logo.classList.add("header__link__logo");
-
-  link.appendChild(logo);
-
-  const mainTitle = document.createElement("h1");
-  mainTitle.classList.add("header__title");
-  mainTitle.textContent = "Nos photographes";
-
-  header.appendChild(link);
-  header.appendChild(mainTitle);
-
-  return header;
+  return `
+    <header class="header">
+      <a href="./index.html" class="header__link">
+        <img src="./assets/images/logo.png" alt="Fisheye Home page" class="header__link__logo">
+      </a>
+      <h1 class="header__title">Nos photographes</h1>
+    </header>
+  `;
 };
 
 const event = () => {};

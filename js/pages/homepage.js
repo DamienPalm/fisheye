@@ -1,29 +1,24 @@
 import Header from "../components/headerHomepage.js";
-import Main from "../components/photographersCards.js";
-import { fetchData } from "../utils/fetchData.js";
+import PhotographersList from "../components/photographersList.js";
+import MediaList from "../components/mediaList.js";
+import { fetchData as fetchPhotographers } from "../utils/fetchData.js";
 
-const buildPage = async () => {
+const buildPage = async (photographers) => {
+  const app = document.querySelector("#app");
+
+  app.innerHTML = `
+    ${Header.render()}
+
+    ${PhotographersList.render(photographers)}
+  `;
+};
+
+(async () => {
   try {
-    const data = await fetchData();
-    console.log("Données récupérées:", data);
-    if (!data || !data.photographers) {
-      throw new Error(
-        "Les données des photographes sont manquantes ou mal formatées"
-      );
-    }
+    const photographer = await fetchPhotographers();
 
-    const headerContainer = document.querySelector(".header");
-    const headerElement = Header.render();
-    headerContainer.replaceWith(headerElement);
-
-    const mainContainer = document.querySelector(".main");
-    const mainElement = Main.render(data.photographers);
-    mainContainer.replaceWith(mainElement);
+    buildPage(photographer.photographers);
   } catch (error) {
     console.error("Erreur lors du chargement de la page:", error);
   }
-};
-
-(() => {
-  buildPage();
 })();

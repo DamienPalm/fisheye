@@ -1,24 +1,87 @@
-#contact_modal {
-    display: none;
+@import "./variables.css";
+@import "./reset.css";
+
+body {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
 }
 
-.photograph-header {
-    background-color: #FAFAFA;
-    height: 300px;
-    margin: 0 100px;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-3xl);
+    padding-bottom: var(--margin-2xl);
+    max-width: var(--max-breakpoint);
+    margin: 0 auto;
+    padding-inline: var(--spacing-9xl);
 }
 
-.contact_button {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    padding: 11px;
+.header__link__logo {
+    height: var(--height-logo);
+}
+
+.main__photographer-profile {
+    background-color: var(--tertiary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-breakpoint);
+    margin: 0 auto;
+
+}
+
+.main__photographer-profile__info {
+    display: flex;
+    flex-direction: column;
+    padding-block: var(--spacing-5xl);
+    padding-inline: var(--spacing-4xl);
+}
+
+.main__photographer-profile__info__name {
+    font-weight: 400;
+    font-size: var(--title-font-size-xl);
+    line-height: var(--title-line-height-xl);
+    color: var(--secondary-color);
+}
+
+.main__photographer-profile__info__location {
+    font-weight: 400;
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-lg);
+    color: var(--primary-color);
+}
+
+.main__photographer-profile__info__tagline {
+    font-weight: 400;
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-sm);
+}
+
+.main__photographer-profile__contact-button {
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-md);
+    font-weight: 700;
+    color: var(--white-color);
+    padding: var(--spacing-md);
     width: 170px;
     height: 70px;
     border: none;
-    background-color: #901C1C;
+    background-color: var(--primary-color);
     border-radius: 5px;
     cursor: pointer;
+}
+
+.main__photographer-profile__photo {
+    object-fit: cover;
+    border-radius: 100%;
+    padding-block: var(--spacing-5xl);
+    padding-inline: var(--spacing-4xl);
+}
+
+#contact_modal {
+    display: none;
 }
 
 .modal {

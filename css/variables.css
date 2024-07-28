@@ -3,22 +3,29 @@
     --secondary-color: #D3573C;
     --tertiary-color: #FAFAFA;
     --price-color: #757575;
+    --white-color: #ffffff;
 
     --title-font-size: 36px;
+    --title-font-size-xl: 64px;
     --font-size-3xs: 8px;
     --font-size-2xs: 10px;
     --font-size-xs: 12px;
     --font-size-sm: 14px;
     --font-size-md: 16px;
+    --font-size-lg: 24px;
 
     --title-line-height: 46px;
+    --title-line-height-xl: 84px;
     --line-height-3xs: 12px;
     --line-height-2xs: 14px;
     --line-height-xs: 16px;
+    --line-height-sm: 24px;
+    --line-height-md: 26px;
+    --line-height-lg: 32px;
 
     --margin-2xl: 100px;
 
-
+    --spacing-md: 8px;
     --spacing-lg: 16px;
     --spacing-xl: 24px;
     --spacing-2xl: 32px;

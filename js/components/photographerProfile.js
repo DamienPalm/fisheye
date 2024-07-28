@@ -1,0 +1,22 @@
+const render = (element) => {
+  return `
+<section class="main__photographer-profile">
+  <article class="main__photographer-profile__info">
+    <h1 class="main__photographer-profile__info__name">
+      ${element.name}
+    </h1>
+    <p class="main__photographer-profile__info__location">${element.city}, ${element.country}</p>
+    <p class="main__photographer-profile__info__tagline">${element.tagline}</p>
+  </article>
+  <button class="main__photographer-profile__contact-button" name="contact me" onclick="displayModal()">Contactez-moi</button>
+  <img src="${element.portrait_thumbnail}" alt="${element.name}" class="main__photographer-profile__photo">
+</section>
+`;
+};
+
+const event = () => {};
+
+export default {
+  render,
+  event,
+};
