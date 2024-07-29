@@ -1,7 +1,8 @@
 :root {
     --primary-color: #901C1C;
     --secondary-color: #D3573C;
-    --tertiary-color: #FAFAFA;
+    --tertiary-color: #DB8876;
+    --background-color: #FAFAFA;
     --price-color: #757575;
     --white-color: #ffffff;
 
@@ -36,6 +37,7 @@
     --spacing-7xl: 72px;
     --spacing-8xl: 80px;
     --spacing-9xl: 88px;
+    --spacing-10xl: 96px;
 
     --max-breakpoint: 1240px;
 

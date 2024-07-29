@@ -22,14 +22,19 @@ body {
     height: var(--height-logo);
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    max-width: var(--max-breakpoint);
+    margin: 0 auto;
+}
+
 .main__photographer-profile {
-    background-color: var(--tertiary-color);
+    background-color: var(--background-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: var(--max-breakpoint);
-    margin: 0 auto;
-
 }
 
 .main__photographer-profile__info {
@@ -78,6 +83,101 @@ body {
     border-radius: 100%;
     padding-block: var(--spacing-5xl);
     padding-inline: var(--spacing-4xl);
+}
+
+.main__media-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.main__media-section__order-by {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.main__media-section__order-by__label__text {
+    font-weight: 700;
+    line-height: var(--spacing-xl);
+}
+
+.main__media-section__order-by__select {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: var(--font-size-md);
+    line-height: var(--spacing-xl);
+    padding: var(--spacing-xl);
+}
+
+.main__media-section__media-list {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    column-gap: var(--spacing-10xl);
+    row-gap: var(--spacing-2xl);
+}
+
+.main__media-section__media-list__card__head-card__media {
+    height: 300px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.main__media-section__media-list__card__body-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__media-section__media-list__card__body-card__title {
+    font-weight: 400;
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-lg);
+    color: var(--primary-color);
+}
+
+.main__media-section__media-list__card__body-card__likes {
+    font-weight: 500;
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-lg);
+    color: var(--primary-color);
+    text-wrap: nowrap;
+}
+
+.main__likes-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 376px;
+    background-color: var(--tertiary-color);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-36px);
+    padding-block: var(--spacing-xl);
+    padding-inline: var(--spacing-3xl);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.main__likes-section__like-counter {
+    font-weight: 500;
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-lg);
+}
+
+.main__likes-section__like-counter__like {
+    padding: var(--spacing-md);
+}
+
+.main__likes-section__price {
+    font-weight: 500;
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-lg);
 }
 
 #contact_modal {
