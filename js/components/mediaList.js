@@ -16,12 +16,12 @@ const render = (element) => {
             <article class="main__media-section__media-list__card">
                 <a class="main__media-section__media-list__card__head-card" href="#">
                 ${
-                  element.image && element.image.toLowerCase().endsWith(".jpg")
+                  element.image && element.image.toLowerCase().endsWith(".webp")
                     ? `<img class="main__media-section__media-list__card__head-card__media" src="../assets/images/${element.photographerName}/${element.image}">`
                     : `<video class="main__media-section__media-list__card__head-card__media" autoplay loop>
                       <source src="../assets/images/${
                         element.photographerName
-                      }/${element.video || element.image}" type="video/mp4">`
+                      }/${element.video || element.image}" type="video/webm">`
                 }
                 </a>
                 <div class="main__media-section__media-list__card__body-card">
