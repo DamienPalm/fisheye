@@ -1,9 +1,5 @@
 const render = (element) => {
   return `
-  <main class="main">
-  ${element
-    .map(
-      (element) => `
     <article class="main__card">
       <a class="main__card__head-card" href="../photographer.html?id=${
         element.id
@@ -17,16 +13,12 @@ const render = (element) => {
       </a>
       <div class="main__card__body-card">
         <p class="main__card__body-card__location">${element.city}, ${
-        element.country
-      }</p>
+    element.country
+  }</p>
         <p class="main__card__body-card__tagline">${element.tagline}</p>
         <p class="main__card__body-card__price">${element.price}€/jour</p>
       </div>
     </article>
-  `
-    )
-    .join("")}
-  </main>
   `;
 };
 

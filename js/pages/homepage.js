@@ -7,8 +7,9 @@ const buildPage = async (photographers) => {
 
   app.innerHTML = `
     ${Header.render()}
-
-    ${PhotographersList.render(photographers)}
+    <main class="main">
+      ${photographers.map(PhotographersList.render).join("")}
+    </main>
   `;
 };
 

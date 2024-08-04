@@ -1,5 +1,6 @@
 import Header from "../components/headerPhotographer.js";
 import PhotographerProfile from "../components/photographerProfile.js";
+import FilterMedia from "../components/filterMedia.js";
 import MediaList from "../components/mediaList.js";
 import LikePhotographer from "../components/likePhotographer.js";
 import ContactForm from "../components/contactForm.js";
@@ -14,9 +15,14 @@ const buildPage = async (photographer, media, totalLikes) => {
 
       <main class="main">
       ${PhotographerProfile.render(photographer)}
-      ${MediaList.render(media)}
-      ${LikePhotographer.render(photographer, totalLikes)}
-      ${ContactForm.render()}
+          <section class="main__media-section">
+            ${FilterMedia.render()}
+            <section class="main__media-section__media-list">
+              ${media.map(MediaList.render).join("")}
+              ${LikePhotographer.render(photographer, totalLikes)}
+              ${ContactForm.render()}
+            </section>
+          </section>
       </main>
     `;
 };
