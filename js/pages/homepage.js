@@ -1,6 +1,5 @@
 import Header from "../components/headerHomepage.js";
 import PhotographersList from "../components/photographersList.js";
-import MediaList from "../components/mediaList.js";
 import { fetchData as fetchPhotographers } from "../utils/fetchData.js";
 
 const buildPage = async (photographers) => {

@@ -2,6 +2,7 @@ import Header from "../components/headerPhotographer.js";
 import PhotographerProfile from "../components/photographerProfile.js";
 import MediaList from "../components/mediaList.js";
 import LikePhotographer from "../components/likePhotographer.js";
+import ContactForm from "../components/contactForm.js";
 import { getPhotographerbyId, getMedia } from "../utils/fetchData.js";
 import { counterLikes } from "../utils/counterLike.js";
 
@@ -15,6 +16,7 @@ const buildPage = async (photographer, media, totalLikes) => {
       ${PhotographerProfile.render(photographer)}
       ${MediaList.render(media)}
       ${LikePhotographer.render(photographer, totalLikes)}
+      ${ContactForm.render()}
       </main>
     `;
 };

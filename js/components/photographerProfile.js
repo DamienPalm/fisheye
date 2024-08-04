@@ -5,11 +5,17 @@ const render = (element) => {
     <h1 class="main__photographer-profile__info__name">
       ${element.name}
     </h1>
-    <p class="main__photographer-profile__info__location">${element.city}, ${element.country}</p>
+    <p class="main__photographer-profile__info__location">${element.city}, ${
+    element.country
+  }</p>
     <p class="main__photographer-profile__info__tagline">${element.tagline}</p>
   </article>
   <button class="main__photographer-profile__contact-button" name="contact me" onclick="displayModal()">Contactez-moi</button>
-  <img src="${element.portrait_thumbnail}" alt="${element.name}" class="main__photographer-profile__photo">
+  <img src="${
+    element.portrait_thumbnail
+      ? element.portrait_thumbnail
+      : "../assets/photographers/account.png"
+  }" alt="${element.name}" class="main__photographer-profile__photo">
 </section>
 `;
 };
