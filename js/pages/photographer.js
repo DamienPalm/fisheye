@@ -15,16 +15,19 @@ const buildPage = async (photographer, media, totalLikes) => {
 
       <main class="main">
       ${PhotographerProfile.render(photographer)}
+      ${ContactForm.render()}
           <section class="main__media-section">
             ${FilterMedia.render()}
             <section class="main__media-section__media-list">
               ${media.map(MediaList.render).join("")}
               ${LikePhotographer.render(photographer, totalLikes)}
-              ${ContactForm.render()}
             </section>
           </section>
       </main>
     `;
+
+  PhotographerProfile.event();
+  ContactForm.event();
 };
 
 const getPhotographerIdFromUrl = () => {

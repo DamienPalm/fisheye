@@ -1,10 +1,12 @@
+import { closeModal } from "../utils/contactForm.js";
+
 const render = () => {
   return `
     <div id="contact_modal">
     <div class="modal">
       <header>
         <h2>Contactez-moi</h2>
-        <img src="./assets/icons/close.svg" onclick="closeModal()" />
+        <img src="./assets/icons/close.svg" id="closeButton">
       </header>
       <form>
         <div>
@@ -18,7 +20,10 @@ const render = () => {
     `;
 };
 
-const event = () => {};
+const event = () => {
+  const closeModalButton = document.getElementById("closeButton");
+  closeModalButton.addEventListener("click", closeModal);
+};
 
 export default {
   render,
