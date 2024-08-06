@@ -6,6 +6,8 @@
     --price-color: #757575;
     --white-color: #ffffff;
 
+    --font-family: "DM Sans", sans-serif;
+
     --title-font-size: 36px;
     --title-font-size-xl: 64px;
     --font-size-3xs: 8px;
@@ -13,7 +15,8 @@
     --font-size-xs: 12px;
     --font-size-sm: 14px;
     --font-size-md: 16px;
-    --font-size-lg: 24px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
 
     --title-line-height: 46px;
     --title-line-height-xl: 84px;
